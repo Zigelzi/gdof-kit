@@ -2,6 +2,9 @@
     import '$lib/assets/app.css';
     import gdofLogo from '$lib/assets/gdof_controller_clean.svg'
     import gdofLogoWithText from '$lib/assets/gdof_controller_text_clean.svg'
+
+    import Header from '$lib/components/Header.svelte';
+
 </script>
 
 <svelte:head>
@@ -18,4 +21,5 @@
     <title>Game Designers of Finland</title>
 </svelte:head>
 
+<Header />
 <slot />

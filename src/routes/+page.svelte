@@ -1,6 +1,5 @@
 <script>
   import Footer from "$lib/components/Footer.svelte";
-  import Header from '$lib/components/Header.svelte';
   import Link from '$lib/components/Link.svelte';
   import NextEvent from '$lib/components/NextEvent.svelte';
   import PastEvent from '$lib/components/PastEvent.svelte';
@@ -34,7 +33,6 @@
 </script>
 
 <div id="landing-page">
-  <Header />
   <section class="mt-xxl ph-m">
     <div class="container">
       <p class="fw-bold fs-heading-l" >Learn and ask the questions about game design that you always wanted to.</p>
