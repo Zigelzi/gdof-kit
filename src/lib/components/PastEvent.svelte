@@ -12,6 +12,6 @@
     <h3 class="fw-bold fs-heading-m">{name}</h3>
     <p class="pv-s">{date.toLocaleString('en-GB', {weekday: 'long'})} - {date.toLocaleDateString('fi')} - {locationName}</p>
     <div class="pv-m">
-        <Link link={link}>View event</Link>
+        <Link link={link}>View event in Meetup</Link>
     </div>
 </div>

@@ -38,7 +38,7 @@
       <p class="fw-bold fs-heading-l" >Learn and ask the questions about game design that you always wanted to.</p>
       <p class="pv-m">Join meetups and community of professional and aspiring professional game designers in Finland. Find new friends and have thought provoking discussiong with fellow game design enthusiasts.</p>
       <div class="mt-m">
-        <Link link={meetupGroupLink} isButton={true}>Attend next event</Link>
+        <Link link={meetupGroupLink} isButton={true}>Attend next event in Meetup</Link>
       </div>
     </div>
   </section>
@@ -58,7 +58,7 @@
         <PastEvent {...event} index={i}/>
       {/each}
       <p class="pv-m">Join the Game Designers of Finland Meetup group to stay up to date about new events</p>
-      <Link link={ meetupGroupLink } isButton={true}>Join group</Link>
+      <Link link={ meetupGroupLink } isButton={true}>Join group in Meetup</Link>
     </div>
   </section>
   <section class=" bg-secondary-100 ph-m pt-l pb-xxl">

@@ -3,7 +3,8 @@
     import Link from './Link.svelte';
     let event = {
         name: 'Battle systems',
-        date: new Date('2022-11-29T18:30:00+02:00'),
+        startDate: new Date('2022-11-29T18:30:00+02:00'),
+        endDate: new Date('2022-11-29T21:00:00+02:00'),
         locationName: 'Metacore',
         address: 'Porkkalankatu 24',
         city: 'Helsinki',
@@ -11,10 +12,13 @@
         link: 'https://www.meetup.com/game-designers-finland/'
     }
 
+    const timeOptions = { hour: '2-digit', minute: '2-digit' };
+
     let daysToEvent; 
+    
     onMount(() => {
         const oneDay = 24 * 60 * 60 * 1000; // Number of milliseconds in one day, hours * hinutes * seconds * milliseconds in a single day
-        const differenceInMs = event.date.valueOf() - Date.now();
+        const differenceInMs = event.startDate.valueOf() - Date.now();
         daysToEvent = Math.round(differenceInMs / oneDay);
         
     });
@@ -22,7 +26,7 @@
 </script>
 <div class="pv-m">
     <h3 class="fw-bold fs-heading-l">{event.name}</h3>
-    <p class="text-accent-500">{event.date.toLocaleString('en-GB', {weekday: 'long'})} - {event.date.toLocaleDateString('fi')} - {event.date.toLocaleTimeString('fi')}</p>
+    <p class="text-accent-500">{event.startDate.toLocaleString('en-GB', {weekday: 'long'})} | {event.startDate.toLocaleDateString('fi')} | {event.startDate.toLocaleTimeString('fi', timeOptions)} - {event.endDate.toLocaleTimeString('fi', timeOptions)}</p>
     {#if daysToEvent > 0}
     <p class="text-accent-500">In { daysToEvent } days</p> 
     {:else if daysToEvent === 0}
@@ -34,6 +38,6 @@
     </div>
     <p>{event.description}</p>
     <div class="pv-m">
-        <Link link={ event.link } isButton={true}>Attend</Link>
+        <Link link={ event.link } isButton={true}>Attend in Meetup</Link>
     </div>
 </div>
