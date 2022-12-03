@@ -4,13 +4,17 @@
   import NextEvent from '$lib/components/NextEvent.svelte';
   import PastEvent from '$lib/components/PastEvent.svelte';
 
-  import discordLogo from '$lib/assets/logo_discord.png';
   import meetupLogo from '$lib/assets/logo_meetup.png';
   import gdofMonetisation from '$lib/assets/gdof_monetisation.webp';
 
-  let discordLink = "https://discord.gg/PaMCsKbrjP";
   let meetupGroupLink = "https://www.meetup.com/game-designers-finland/"
   let pastEvents = [
+    {
+      name: 'Battle systems @ Metacore',
+		  date: new Date('2022-11-29T18:30:00+02:00'),
+      locationName: 'Metacore',
+      link: 'https://www.meetup.com/game-designers-finland/events/289623080/'
+    },
     {
       name: 'Matt Dondelinger - Monetization Design',
       date: new Date('2022-09-27T18:30:00+02:00'),
@@ -67,12 +71,6 @@
       <p class="mb-m">Game designers of Finland is all about connecting and sharing information with fellow game designers.</p>
       <p>If you enjoy making games, want to share your experiences about solving game design problems or get help and new ideas how to tackle your current design challenges, you’re in the right place!</p>
       <div>
-        <div class="flex mt-xxl">
-          <Link link={ discordLink }><img src="{discordLogo}" alt="Discord logo" class="img-s"></Link>
-          <div class="flex flex-align-center">
-            <p class="ml-m"><Link link={ discordLink }>Join our Discord</Link> to discuss about game design.</p>
-          </div>
-        </div>
         <div class="flex mt-m">
           <Link link={ meetupGroupLink }><img src="{meetupLogo}" alt="Discord logo" class="img-s"></Link>
           <div class="flex flex-align-center">
