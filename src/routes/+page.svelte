@@ -8,6 +8,7 @@
   import gdofMonetisation from '$lib/assets/gdof_monetisation.webp';
 
   let meetupGroupLink = "https://www.meetup.com/game-designers-finland/"
+  let isNextEventAvailable = false;
   let pastEvents = [
     {
       name: 'Battle systems @ Metacore',
@@ -39,7 +40,7 @@
 <div id="landing-page">
   <section class="mt-xxl ph-m">
     <div class="container">
-      <p class="fw-bold fs-heading-l" >Learn and ask the questions about game design that you always wanted to.</p>
+      <p class="fw-bold fs-heading-l" >Learn and ask the questions about game design that you always wanted to</p>
       <p class="pv-m">Join meetups and community of professional and aspiring professional game designers in Finland. Find new friends and have thought provoking discussiong with fellow game design enthusiasts.</p>
       <div class="mt-m">
         <Link link={meetupGroupLink} isButton={true}>Attend next event in Meetup</Link>
@@ -51,7 +52,20 @@
   <section class="r-20 bg-secondary-100 ph-m pv-l">
     <div class="container">
       <h2 class="text-heading-m" >Next event</h2>
-      <NextEvent />
+      {#if isNextEventAvailable}
+        <NextEvent />
+      {:else }
+      <div class="pv-m">
+        <h3 class="fw-bold fs-heading-l">To be announced</h3>
+        <p class="pv-s">The details of next meetup are not yet available. Join our Meetup group to get notified about the next event!</p>
+        <div class="pv-m">
+          <Link link={meetupGroupLink} isButton={true}>Join Meetup group</Link>
+        </div>
+      </div>  
+      
+
+      {/if}
+      
     </div>
   </section>
   <div class="img-v-l img-bg-cover img-bg-center" style="background-image: url({gdofMonetisation})" />
@@ -87,6 +101,6 @@
 
 <style>
 #landing-page {
-  height: 95vh;
+  height: 65vh;
 }
 </style>
