@@ -4,7 +4,6 @@
     import gdofLogoWithText from '$lib/assets/gdof_controller_text_clean.svg'
 
     import Header from '$lib/components/Header.svelte';
-
 </script>
 
 <svelte:head>
