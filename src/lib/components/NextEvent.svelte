@@ -13,7 +13,7 @@
 		link: 'https://www.meetup.com/game-designers-finland/'
 	};
 
-	const timeOptions = { hour: '2-digit', minute: '2-digit' };
+	const timeOptions = { hour: 'numeric', minute: 'numeric' };
 
 	let daysToEvent;
 

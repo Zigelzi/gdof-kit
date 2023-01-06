@@ -1,4 +1,3 @@
-
 <div class="article">
-<h1>Articles</h1>
+	<h1>Articles</h1>
 </div>
