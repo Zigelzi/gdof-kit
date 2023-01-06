@@ -37,9 +37,9 @@
 	];
 </script>
 
-<div id="landing-page">
-	<section class="mt-xxl ph-m">
-		<div class="container">
+<main>
+	<section id="landing-page">
+		<div class="container mt-xxl">
 			<p class="fw-bold fs-heading-l">
 				Learn and ask the questions about game design that you always wanted to
 			</p>
@@ -53,9 +53,7 @@
 			</div>
 		</div>
 	</section>
-</div>
-<main>
-	<section class="r-20 bg-secondary-100 ph-m pv-l">
+	<section class="r-20 bg-secondary-100 pv-l">
 		<div class="container">
 			<h2 class="text-heading-m">Next event</h2>
 			{#if isNextEventAvailable}
@@ -78,7 +76,7 @@
 		class="img-v-l img-bg-cover img-bg-center"
 		style="background-image: url({gdofMonetisation})"
 	/>
-	<section class="ph-m pv-l">
+	<section class="pv-l">
 		<div class="container">
 			<h2 class="text-heading-m">Past events</h2>
 			{#each pastEvents as event, i}
@@ -90,7 +88,7 @@
 			<Link link={meetupGroupLink} isButton={true}>Join group in Meetup</Link>
 		</div>
 	</section>
-	<section class=" bg-secondary-100 ph-m pt-l pb-xxl">
+	<section class="bg-secondary-100 pt-l pb-xxl">
 		<div class="container">
 			<h2 class="text-heading-m mb-m">Community for game designers</h2>
 			<p class="mb-m">
