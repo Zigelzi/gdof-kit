@@ -13,7 +13,9 @@ export async function load() {
 				}
 				author {
 					name
-				}
+				},
+				slug,
+				excerpt
 			}
 		}
 	`;

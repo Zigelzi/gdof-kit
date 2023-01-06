@@ -4,7 +4,7 @@
 
 <header class="primary-header p-m">
 	<div class="container header-full-width flex">
-		<h1 class="fw-bold fs-heading-m">Game Designers of Finland</h1>
+		<p class="fw-bold fs-heading-m">Game Designers of Finland</p>
 	</div>
 </header>
 

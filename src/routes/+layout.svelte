@@ -4,6 +4,7 @@
 	import gdofLogoWithText from '$lib/assets/gdof_controller_text_clean.svg';
 
 	import Header from '$lib/components/Header.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 </script>
 
 <svelte:head>
@@ -24,4 +25,7 @@
 </svelte:head>
 
 <Header />
-<slot />
+<main>
+	<slot />
+</main>
+<Footer />

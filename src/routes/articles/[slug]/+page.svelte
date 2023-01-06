@@ -1,4 +1,4 @@
 <script>
 </script>
 
-<div class="article">This is individual article</div>
+<div class="container">This is individual article</div>

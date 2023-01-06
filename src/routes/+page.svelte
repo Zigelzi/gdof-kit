@@ -37,86 +37,79 @@
 	];
 </script>
 
-<main>
-	<section id="landing-page">
-		<div class="container mt-xxl">
-			<p class="fw-bold fs-heading-l">
-				Learn and ask the questions about game design that you always wanted to
-			</p>
-			<p class="pv-m">
-				Join meetups and community of professional and aspiring professional game designers in
-				Finland. Find new friends and have thought provoking discussiong with fellow game design
-				enthusiasts.
-			</p>
-			<div class="mt-m">
-				<Link link={meetupGroupLink} isButton={true}>Attend next event in Meetup</Link>
-			</div>
+<section id="landing-page">
+	<div class="container mt-xxl">
+		<p class="fw-bold fs-heading-l">
+			Game design community for you
+		</p>
+		<p class="pv-m">
+			Join meetups and community of professional and aspiring professional game designers in
+			Finland. Find new friends and have thought provoking discussiong with fellow game design
+			enthusiasts.
+		</p>
+		<div class="mt-m">
+			<Link link={meetupGroupLink} isButton={true}>Attend next event in Meetup</Link>
 		</div>
-	</section>
-	<section class="r-20 bg-secondary-100 pv-l">
-		<div class="container">
-			<h2 class="text-heading-m">Next event</h2>
-			{#if isNextEventAvailable}
-				<NextEvent />
-			{:else}
+	</div>
+</section>
+<section class="r-20 bg-secondary-100 pv-l">
+	<div class="container">
+		<h2 class="text-heading-m">Next event</h2>
+		{#if isNextEventAvailable}
+			<NextEvent />
+		{:else}
+			<div class="pv-m">
+				<h3 class="fw-bold fs-heading-l">To be announced</h3>
+				<p class="pv-s">
+					The details of next meetup are not yet available. Join our Meetup group to get notified
+					about the next event!
+				</p>
 				<div class="pv-m">
-					<h3 class="fw-bold fs-heading-l">To be announced</h3>
-					<p class="pv-s">
-						The details of next meetup are not yet available. Join our Meetup group to get notified
-						about the next event!
-					</p>
-					<div class="pv-m">
-						<Link link={meetupGroupLink} isButton={true}>Join Meetup group</Link>
-					</div>
+					<Link link={meetupGroupLink} isButton={true}>Join Meetup group</Link>
 				</div>
-			{/if}
-		</div>
-	</section>
-	<div
-		class="img-v-l img-bg-cover img-bg-center"
-		style="background-image: url({gdofMonetisation})"
-	/>
-	<section class="pv-l">
-		<div class="container">
-			<h2 class="text-heading-m">Past events</h2>
-			{#each pastEvents as event, i}
-				<PastEvent {...event} index={i} />
-			{/each}
-			<p class="pv-m">
-				Join the Game Designers of Finland Meetup group to stay up to date about new events
-			</p>
-			<Link link={meetupGroupLink} isButton={true}>Join group in Meetup</Link>
-		</div>
-	</section>
-	<section class="bg-secondary-100 pt-l pb-xxl">
-		<div class="container">
-			<h2 class="text-heading-m mb-m">Community for game designers</h2>
-			<p class="mb-m">
-				Game designers of Finland is all about connecting and sharing information with fellow game
-				designers.
-			</p>
-			<p>
-				If you enjoy making games, want to share your experiences about solving game design problems
-				or get help and new ideas how to tackle your current design challenges, you’re in the right
-				place!
-			</p>
-			<div>
-				<div class="flex mt-m">
-					<Link link={meetupGroupLink}
-						><img src={meetupLogo} alt="Discord logo" class="img-s" /></Link
-					>
-					<div class="flex flex-align-center">
-						<p class="ml-m">
-							<Link link={meetupGroupLink}>Join our Meetup group</Link> to keep up to date about our
-							upcoming and past events.
-						</p>
-					</div>
+			</div>
+		{/if}
+	</div>
+</section>
+<div class="img-v-l img-bg-cover img-bg-center" style="background-image: url({gdofMonetisation})" />
+<section class="pv-l">
+	<div class="container">
+		<h2 class="text-heading-m">Past events</h2>
+		{#each pastEvents as event, i}
+			<PastEvent {...event} index={i} />
+		{/each}
+		<p class="pv-m">
+			Join the Game Designers of Finland Meetup group to stay up to date about new events
+		</p>
+		<Link link={meetupGroupLink} isButton={true}>Join group in Meetup</Link>
+	</div>
+</section>
+<section class="bg-secondary-100 pt-l pb-xxl">
+	<div class="container">
+		<h2 class="text-heading-m mb-m">Community for game designers</h2>
+		<p class="mb-m">
+			Game designers of Finland is all about connecting and sharing information with fellow game
+			designers.
+		</p>
+		<p>
+			If you enjoy making games, want to share your experiences about solving game design problems
+			or get help and new ideas how to tackle your current design challenges, you’re in the right
+			place!
+		</p>
+		<div>
+			<div class="flex mt-m">
+				<Link link={meetupGroupLink}><img src={meetupLogo} alt="Discord logo" class="img-s" /></Link
+				>
+				<div class="flex flex-align-center">
+					<p class="ml-m">
+						<Link link={meetupGroupLink}>Join our Meetup group</Link> to keep up to date about our upcoming
+						and past events.
+					</p>
 				</div>
 			</div>
 		</div>
-	</section>
-</main>
-<Footer />
+	</div>
+</section>
 
 <style>
 	#landing-page {
