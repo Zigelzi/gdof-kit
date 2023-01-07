@@ -9,10 +9,10 @@
 		let targetText;
 
 		if (inNewTab) {
-			targetText = '_blank';
+			targetText = "_blank";
 		}
 		else {
-			targetText = '_self';
+			targetText = "_self";
 		}
 		return targetText;
 	}
@@ -23,11 +23,16 @@
 <style>
 	.btn-primary {
 		background-color: var(--bg-btn);
-		transition: background-color 0.2s;
+		transition: background-color var(--td-m) ease;
 	}
 
-	.btn-primary:hover {
+	.btn-primary:hover,
+	.btn-primary:focus {
 		background-color: var(--bg-btn-hover);
+	}
+
+	a {
+		text-decoration: none;
 	}
 
 	a:visited {

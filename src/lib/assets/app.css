@@ -82,6 +82,9 @@
 
 	--img-s: 80px;
 
+	--td-s: .15s;
+	--td-m: .2s;
+
 	color-scheme: light dark;
 	color: var(--grey-600);
 	background-color: var(--grey-100);
@@ -156,7 +159,7 @@ p {
 }
 
 a {
-	text-decoration: none;
+	text-underline-offset: 5px;
 }
 
 /* A elements that don't have a class get default styles */
