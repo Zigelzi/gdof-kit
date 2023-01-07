@@ -42,7 +42,7 @@
 
 	--fs-body: var(--fs-500);
 	--fs-button: var(--fs-400);
-	--fs-link: var(--fs-400);
+	--fs-link: var(--fs-500);
 
 	--fs-heading-xl: var(--fs-800);
 	--fs-heading-l: var(--fs-700);
@@ -82,8 +82,8 @@
 
 	--img-s: 80px;
 
-	--td-s: .15s;
-	--td-m: .2s;
+	--td-s: 0.15s;
+	--td-m: 0.2s;
 
 	color-scheme: light dark;
 	color: var(--grey-600);
@@ -257,6 +257,15 @@ Start of project specific styling.
 	text-align: center;
 }
 
+.text-link {
+	font-size: var(--fs-link);
+	transition: color var(--td-m) ease;
+}
+
+.text-link:hover,
+.text-link:focus {
+	color: var(--blue-600);
+}
 /* Background color utility classes */
 .bg-primary-100 {
 	background-color: var(--bg-primary-100);

@@ -12,7 +12,8 @@ export async function load({ params }) {
 					name
 				}
 				content {
-					html
+					html,
+                    raw
 				},
                 publishedAt
 			}

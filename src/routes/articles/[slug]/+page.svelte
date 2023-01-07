@@ -1,14 +1,31 @@
 <script>
+    import { astToHtmlString } from '@graphcms/rich-text-html-renderer';
+
     export let data;
 
-    let article = data.post;
-    let publishedDate = new Date(article.publishedAt).toLocaleDateString('fi');
+    const article = data.post;
+    const publishedDate = new Date(article.publishedAt).toLocaleDateString('fi');
+
+    const renderers = {
+        h2: ({children}) => `<h2 class="fw-bold fs-heading-m pt-m pb-xs">${children}</h2>`,
+        a: ({children, href}) => `<a href=${href} class="text-accent-500 text-link">${children}</a>`,
+        p: ({children}) => `<p class="pv-s">${children}</p>`
+
+    }
+    function addContent(article) {
+        const content = article.content.raw.children;
+        const rendered = astToHtmlString({content: content, renderers: renderers});
+        return {...article, rendered}
+    }
+
+    let postsWithContent = addContent(article);
+
 </script>
 
 <div class="container">
-    <h1 class="text-heading-m">{article.title}</h1>
+    <h1 class="text-heading-l">{postsWithContent.title}</h1>
     <p>{article.author.name} - {publishedDate}</p>
-    <div>
-        {@html article.content.html}
+    <div class="pv-m">
+        {@html postsWithContent.rendered}
     </div>
 </div>
