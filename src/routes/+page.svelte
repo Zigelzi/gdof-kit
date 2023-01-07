@@ -1,5 +1,5 @@
 <script>
-	import Footer from '$lib/components/Footer.svelte';
+	import Button from '$lib/components/Button.svelte';
 	import Link from '$lib/components/Link.svelte';
 	import NextEvent from '$lib/components/NextEvent.svelte';
 	import PastEvent from '$lib/components/PastEvent.svelte';
@@ -48,7 +48,7 @@
 			enthusiasts.
 		</p>
 		<div class="mt-m">
-			<Link link={meetupGroupLink} isButton={true}>Attend next event in Meetup</Link>
+			<Button href={meetupGroupLink}>Attend next event in Meetup</Button>
 		</div>
 	</div>
 </section>
@@ -65,7 +65,7 @@
 					about the next event!
 				</p>
 				<div class="pv-m">
-					<Link link={meetupGroupLink} isButton={true}>Join Meetup group</Link>
+					<Button href={meetupGroupLink}>Join Meetup group</Button>
 				</div>
 			</div>
 		{/if}
@@ -81,7 +81,7 @@
 		<p class="pv-m">
 			Join the Game Designers of Finland Meetup group to stay up to date about new events
 		</p>
-		<Link link={meetupGroupLink} isButton={true}>Join group in Meetup</Link>
+		<Button href={meetupGroupLink}>Join group in Meetup</Button>
 	</div>
 </section>
 <section class="bg-secondary-100 pt-l pb-xxl">
@@ -98,11 +98,11 @@
 		</p>
 		<div>
 			<div class="flex mt-m">
-				<Link link={meetupGroupLink}><img src={meetupLogo} alt="Discord logo" class="img-s" /></Link
+				<Link href={meetupGroupLink}><img src={meetupLogo} alt="Meetup logo" class="img-s" /></Link
 				>
 				<div class="flex flex-align-center">
 					<p class="ml-m">
-						<Link link={meetupGroupLink}>Join our Meetup group</Link> to keep up to date about our upcoming
+						<Link href={meetupGroupLink}>Join our Meetup group</Link> to keep up to date about our upcoming
 						and past events.
 					</p>
 				</div>

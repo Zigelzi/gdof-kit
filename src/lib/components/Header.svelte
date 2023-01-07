@@ -1,10 +1,6 @@
-<script>
-	import gdofLogo from '$lib/assets/gdof_controller_clean.svg';
-</script>
-
 <header class="primary-header p-m">
 	<div class="container header-full-width flex">
-		<p class="fw-bold fs-heading-m">Game Designers of Finland</p>
+		<a href="/" class="fw-bold fs-heading-m">Game Designers of Finland</a>
 	</div>
 </header>
 
@@ -15,5 +11,9 @@
 
 	.header-full-width {
 		width: 100%;
+	}
+
+	a:visited {
+		color: initial;
 	}
 </style>

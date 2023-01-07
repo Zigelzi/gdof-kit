@@ -45,6 +45,6 @@
 	</div>
 	<p>{event.description}</p>
 	<div class="pv-m">
-		<Link link={event.link} isButton={true}>Attend in Meetup</Link>
+		<Link href={event.link}>Attend in Meetup</Link>
 	</div>
 </div>
