@@ -1,20 +1,15 @@
 <script>
-	import { page } from '$app/stores';
+	import ArticleItem from "$lib/components/ArticleItem.svelte";
 	export let data;
 
-	let posts = data.posts;
+	let articles = data.posts;
 </script>
 
 <div class="container">
 	<div class="pv-l">
 		<h1 class="fw-bold fs-heading-l">Articles</h1>
 	</div>
-	{#each posts as post, id}
-		<div class="pv-m">
-			<a href="{$page.route.id}/{post.slug}">
-				<h2 class="fw-bold fs-heading-m">{post.title}</h2>
-				<p>{post.excerpt}</p>
-			</a>
-		</div>
+	{#each articles as article, id}
+		<ArticleItem article={article} />
 	{/each}
 </div>
