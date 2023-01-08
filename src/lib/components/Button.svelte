@@ -22,6 +22,7 @@
 
 <style>
 	.btn-primary {
+		display: inline-block;
 		background-color: var(--bg-btn);
 		transition: background-color var(--td-s);
 	}

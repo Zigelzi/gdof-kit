@@ -21,7 +21,7 @@
 
 <style>
 	.nav-item {
-		padding-right: var(--p-m);
+		/* padding-right: var(--p-m); */
 	}
 
 	a {
@@ -37,6 +37,6 @@
 	}
 
     .current-page {
-        font-weight: var(--fw-bold);
+        color: var(--blue-500);
     }
 </style>

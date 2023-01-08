@@ -38,7 +38,7 @@
 </script>
 
 <section id="landing-page">
-	<div class="container mt-xxl">
+	<div class="container pt-xxl pb-xxl">
 		<p class="fw-bold fs-heading-l">
 			Game design community for you
 		</p>
@@ -47,7 +47,7 @@
 			Finland. Find new friends and have thought provoking discussiong with fellow game design
 			enthusiasts.
 		</p>
-		<div class="mt-m">
+		<div class="pt-m">
 			<Button href={meetupGroupLink}>Attend next event in Meetup</Button>
 		</div>
 	</div>
@@ -113,6 +113,6 @@
 
 <style>
 	#landing-page {
-		height: 65vh;
+		min-height: calc(95vh - var(--header-height));
 	}
 </style>

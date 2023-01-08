@@ -13,6 +13,6 @@
 
     .nav-list {
         display: flex;
-        justify-content: center;
+        /* justify-content: center; */
     }
 </style>

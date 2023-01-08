@@ -85,6 +85,9 @@
 	--td-s: 0.15s;
 	--td-m: 0.2s;
 
+	--header-height: 5rem;
+	--footer-height: 8rem;
+
 	color-scheme: light dark;
 	color: var(--grey-600);
 	background-color: var(--grey-100);
