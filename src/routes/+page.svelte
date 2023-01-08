@@ -7,34 +7,12 @@
 	import meetupLogo from '$lib/assets/logo_meetup.png';
 	import gdofMonetisation from '$lib/assets/gdof_monetisation.webp';
 
+	export let data;
+
 	let meetupGroupLink = 'https://www.meetup.com/game-designers-finland/';
 	let isNextEventAvailable = false;
-	let pastEvents = [
-		{
-			name: 'Battle systems @ Metacore',
-			date: new Date('2022-11-29T18:30:00+02:00'),
-			locationName: 'Metacore',
-			link: 'https://www.meetup.com/game-designers-finland/events/289623080/'
-		},
-		{
-			name: 'Matt Dondelinger - Monetization Design',
-			date: new Date('2022-09-27T18:30:00+02:00'),
-			locationName: 'Arcade5',
-			link: 'https://www.meetup.com/game-designers-finland/events/288132002/'
-		},
-		{
-			name: 'Game Designers of Finland Mentor BBQ',
-			date: new Date('2022-06-14T18:30:00+02:00'),
-			locationName: 'Arcade5',
-			link: 'https://www.meetup.com/game-designers-finland/events/285927780/'
-		},
-		{
-			name: 'Game Designers - Finland @ Skunkworks!',
-			date: new Date('2022-04-19T19:00:00+02:00'),
-			locationName: 'Skunkworks',
-			link: 'https://www.meetup.com/game-designers-finland/events/284093445/'
-		}
-	];
+
+	let events = data.events;
 </script>
 
 <section id="landing-page">
@@ -56,7 +34,7 @@
 	<div class="container">
 		<h2 class="text-heading-m">Next event</h2>
 		{#if isNextEventAvailable}
-			<NextEvent />
+			<NextEvent event={events[0]} />
 		{:else}
 			<div class="pv-m">
 				<h3 class="fw-bold fs-heading-l">To be announced</h3>
@@ -75,13 +53,13 @@
 <section class="pv-l">
 	<div class="container">
 		<h2 class="text-heading-m">Past events</h2>
-		{#each pastEvents as event, i}
+		{#each events as event, i}
 			<PastEvent {...event} index={i} />
 		{/each}
 		<p class="pv-m">
 			Join the Game Designers of Finland Meetup group to stay up to date about new events
 		</p>
-		<Button href={meetupGroupLink}>Join group in Meetup</Button>
+		<Button href={meetupGroupLink}>Join Meetup group</Button>
 	</div>
 </section>
 <section class="bg-secondary-100 pt-l pb-xxl">

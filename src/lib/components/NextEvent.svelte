@@ -1,17 +1,8 @@
 <script>
 	import { onMount } from 'svelte';
 	import Link from './Link.svelte';
-	let event = {
-		name: 'Battle systems',
-		startDate: new Date('2022-11-29T18:30:00+02:00'),
-		endDate: new Date('2022-11-29T21:00:00+02:00'),
-		locationName: 'Metacore',
-		address: 'Porkkalankatu 24',
-		city: 'Helsinki',
-		description:
-			'When you create a game that has battle and combat, they’re the systems that  the players interact with the most. Designing a combat system that supports the player experience you want to deliver is key for creating games that players enjoy and want to return to. To learn what you should consider when designing a great combat and battle system for your game, join us at Metacore office!',
-		link: 'https://www.meetup.com/game-designers-finland/'
-	};
+
+	export let event;
 
 	const timeOptions = { hour: 'numeric', minute: 'numeric' };
 
@@ -25,7 +16,7 @@
 </script>
 
 <div class="pv-m">
-	<h3 class="fw-bold fs-heading-l">{event.name}</h3>
+	<h3 class="fw-bold fs-heading-l">{event.title}</h3>
 	<p class="text-accent-500">
 		{event.startDate.toLocaleString('en-GB', { weekday: 'long' })} | {event.startDate.toLocaleDateString(
 			'fi'
@@ -40,11 +31,11 @@
 		<p class="text-accent-500">Today!</p>
 	{/if}
 	<div class="pv-m text-grey-400">
-		<p>{event.locationName}</p>
-		<p>{event.address}, {event.city}</p>
+		<p>{event.venue.name}</p>
+		<p>{event.venue.address}, {event.venue.city}</p>
 	</div>
 	<p>{event.description}</p>
 	<div class="pv-m">
-		<Link href={event.link}>Attend in Meetup</Link>
+		<Link href={event.meetupLink}>Attend in Meetup</Link>
 	</div>
 </div>
