@@ -18,14 +18,14 @@
 	}
 </script>
 
-<a href={href} class="pv-s text-accent-500" class:fw-bold={isBold} target={target}>
+<a {href} class="pv-s text-accent-500" class:fw-bold={isBold} {target}>
 	<slot />
 </a>
 
 <style>
 	a {
 		font-size: var(--fs-link);	
-		transition: color var(--td-m) ease;
+		transition: color var(--td-s);
 	}
 
 	a:hover,

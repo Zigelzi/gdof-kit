@@ -18,12 +18,12 @@
 	}
 </script>
 
-<a href={href} target={target} class="ph-m pv-s fw-bold fs-link text-grey-100 r-10 btn-primary"><slot /></a>
+<a {href} {target} class="ph-m pv-s fw-bold fs-link text-grey-100 r-10 btn-primary"><slot /></a>
 
 <style>
 	.btn-primary {
 		background-color: var(--bg-btn);
-		transition: background-color var(--td-m) ease;
+		transition: background-color var(--td-s);
 	}
 
 	.btn-primary:hover,
