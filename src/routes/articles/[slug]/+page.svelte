@@ -7,9 +7,9 @@
     const publishedDate = new Date(article.publishedAt).toLocaleDateString('fi');
 
     const renderers = {
-        h2: ({children}) => `<h2 class="fw-bold fs-heading-m pt-m pb-xs">${children}</h2>`,
+        h2: ({children}) => `<h2 class="fw-bold fs-heading-m pt-m pb-m">${children}</h2>`,
         a: ({children, href}) => `<a href=${href} class="text-accent-500 text-link">${children}</a>`,
-        p: ({children}) => `<p class="pv-s">${children}</p>`
+        p: ({children}) => `<p class="pb-m">${children}</p>`
 
     }
     function addContent(article) {
@@ -23,9 +23,9 @@
 </script>
 
 <div class="container">
-    <h1 class="text-heading-l">{postsWithContent.title}</h1>
-    <p>{article.author.name} - {publishedDate}</p>
-    <div class="pv-m">
+    <h1 class="text-heading-l pt-l">{postsWithContent.title}</h1>
+    <p class="pb-m text-grey-400">{article.author.name} - {publishedDate}</p>
+    <div class="pb-m">
         {@html postsWithContent.rendered}
     </div>
 </div>
