@@ -24,12 +24,10 @@
 		flex-wrap: wrap;
 	}
 
-	a {
-		text-decoration: none;
-	}
-
+	a,
 	a:visited {
-		color: initial;
+		text-decoration: none;
+		color: var(--grey-600);
 	}
 
 	.header-item {

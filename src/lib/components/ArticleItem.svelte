@@ -13,7 +13,7 @@
 <style>
     a,
     a:visited {
-        color: initial;
+        color: var(--grey-600);
         text-decoration: none;
     }
 </style>
