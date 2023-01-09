@@ -16,18 +16,31 @@
 </script>
 
 <section id="landing-page">
-	<div class="container pt-xxl pb-xxl">
-		<p class="fw-bold fs-heading-l">
-			Game design community for you
-		</p>
+	<div class="container pt-l pb-xxl">
+		<p class="fw-bold fs-heading-l">Game design community for you</p>
 		<p class="pv-m">
-			Join meetups and community of professional and aspiring professional game designers in
-			Finland. Find new friends and have thought provoking discussiong with fellow game design
-			enthusiasts.
+			Join community of professional and aspiring professional game designers in Finland. Find new
+			friends and have thought provoking discussiong with fellow game design enthusiasts.
 		</p>
 		<div class="pt-m">
-			<Button href={meetupGroupLink}>Attend next event in Meetup</Button>
+			<Button href={meetupGroupLink}>Join the group in Meetup</Button>
 		</div>
+	</div>
+	<div
+		class="img-v-l img-bg-cover img-bg-center"
+		style="background-image: url({gdofMonetisation})"
+	/>
+</section>
+<section class="r-20 pv-l">
+	<div class="container">
+		<h2 class="text-heading-m pb-m">Events</h2>
+		<p class="pb-s">
+			We organise free events with the best game designers in Finland share their expertise and passion
+			about variety of topics.
+		</p>
+		<h2 class="text-heading-m pt-l pb-m">Articles & summaries</h2>
+		<p class="pb-m">Learn about game design in our bite sized summaries covering game design talks and interviews.</p>
+		<Link href="/articles" inNewTab={false}>View articles</Link>
 	</div>
 </section>
 <section class="r-20 bg-secondary-100 pv-l">
@@ -49,7 +62,6 @@
 		{/if}
 	</div>
 </section>
-<div class="img-v-l img-bg-cover img-bg-center" style="background-image: url({gdofMonetisation})" />
 <section class="pv-l">
 	<div class="container">
 		<h2 class="text-heading-m">Past events</h2>
@@ -76,8 +88,7 @@
 		</p>
 		<div>
 			<div class="flex mt-m">
-				<Link href={meetupGroupLink}><img src={meetupLogo} alt="Meetup logo" class="img-s" /></Link
-				>
+				<Link href={meetupGroupLink}><img src={meetupLogo} alt="Meetup logo" class="img-s" /></Link>
 				<div class="flex flex-align-center">
 					<p class="ml-m">
 						<Link href={meetupGroupLink}>Join our Meetup group</Link> to keep up to date about our upcoming
@@ -91,6 +102,6 @@
 
 <style>
 	#landing-page {
-		min-height: calc(95vh - var(--header-height));
+		/* min-height: calc(95vh - var(--header-height)); */
 	}
 </style>
