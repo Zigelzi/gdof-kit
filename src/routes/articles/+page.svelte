@@ -6,8 +6,8 @@
 </script>
 
 <div class="container">
-	<div class="pv-l">
-		<h1 class="fw-bold fs-heading-l">Articles</h1>
+	<div class="pt-l pb-m">
+		<h1 class="fs-heading-m">Articles</h1>
 	</div>
 	{#each articles as article, id}
 		<ArticleItem article={article} />
