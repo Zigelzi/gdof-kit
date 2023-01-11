@@ -5,7 +5,7 @@
 	import PastEvent from '$lib/components/PastEvent.svelte';
 
 	import meetupLogo from '$lib/assets/logo_meetup.png';
-	import gdofMonetisation from '$lib/assets/gdof_monetisation.webp';
+	import gdofBattleSystems from '$lib/assets/gdof_battle_systems.webp';
 
 	export let data;
 
@@ -19,7 +19,7 @@
 	<div class="container pt-l pb-xxl">
 		<p class="fw-bold fs-heading-l">Game design community for you</p>
 		<p class="pv-m">
-			Join community of professional and aspiring professional game designers in Finland. Find new
+			Join the community of professional and aspiring professional game designers in Finland. Find new
 			friends and have thought provoking discussiong with fellow game design enthusiasts.
 		</p>
 		<div class="pt-m">
@@ -28,7 +28,7 @@
 	</div>
 	<div
 		class="img-v-l img-bg-cover img-bg-center"
-		style="background-image: url({gdofMonetisation})"
+		style="background-image: url({gdofBattleSystems})"
 	/>
 </section>
 <section class="r-20 pv-l">
