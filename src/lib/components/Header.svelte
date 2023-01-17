@@ -2,8 +2,8 @@
 	import Navigation from './Navigation/Navigation.svelte';
 </script>
 
-<header class="ph-m pb-s">
-	<div class="container primary-header pt-s">
+<header class="mh-m pv-s">
+	<div class="container primary-header">
 		<div class="header-item">
 			<a href="/" class="fw-bold fs-heading-m">Game Designers of Finland</a>
 		</div>

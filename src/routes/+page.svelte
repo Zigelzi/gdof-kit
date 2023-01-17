@@ -1,12 +1,16 @@
 <script>
+	import BackgroundImage from '$lib/components/BackgroundImage.svelte';
 	import Blurb from '$lib/components/Blurb.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import Link from '$lib/components/Link.svelte';
 	import NextEvent from '$lib/components/NextEvent.svelte';
 	import PastEvent from '$lib/components/PastEvent.svelte';
+	import TextBox from '$lib/components/TextBox.svelte';
 
 	import meetupLogo from '$lib/assets/logo_meetup.png';
-	import gdofBattleSystems from '$lib/assets/gdof_battle_systems.webp';
+	import gdofAttend from '$lib/assets/gdof_attend.webp';
+	import gdofHost from '$lib/assets/gdof_host.webp';
+	import gdofSpeak from '$lib/assets/gdof_speak.webp';
 
 	export let data;
 
@@ -17,7 +21,7 @@
 </script>
 
 <section id="landing-page">
-	<div class="container mt-l mb-xxl">
+	<div class="container mt-l mb-xxl ph-m">
 		<p class="fw-bold fs-heading-l">Game design community for you</p>
 		<p class="pv-m">
 			Join the community of professional and aspiring professional game designers in Finland. Find
@@ -27,55 +31,41 @@
 			<Button href={meetupGroupLink}>Join Meetup group</Button>
 		</div>
 	</div>
-	<div
-		class="img-v-l img-bg-cover img-bg-center"
-		style="background-image: url({gdofBattleSystems})"
-	/>
 </section>
-<section class="">
-	<div>
-		<Blurb><h2>Game designers</h2></Blurb>
-	</div>
-	<div class="container mv-l">
-		<div>
-			<h3 class="mb-m text-heading-m">Events</h3>
-			<h4 class="fw-bold mb-s">Learn</h4>
-			<p class="mb-s">Join our free events to learn about in depth topics of game design.</p>
+<section>
+	<Blurb><h2>Events</h2></Blurb>
+	<div class="flex flex-justify-end flex-wrap">
+		<TextBox>
+			<h2 class="text-heading-l mb-m">Attend</h2>
 			<p>
-				Expert game designers share their knowledge and experience with you, so that you can get
-				inspired in your endeavours in the game design space.
+				Join our free events to learn about topics related to game design and meet new and existing
+				friends.
 			</p>
-			<h4 class="fw-bold mt-m mb-s">Meet</h4>
-			<p class="mb-m">
-				Connect with existing friends and meet new fellow game designers. Get inspired by new
-				viewpoints and entertain your curiosity with interesting conversations.
-			</p>
-			<Link href="#next-event" inNewTab={false}>View next event</Link>
-			<h4 class="fw-bold mt-m mb-s">Speak</h4>
-			<p>Share your knowledge and experience with other game designers by speaking in our event.</p>
-		</div>
-		<div class="mt-xxl mb-xxl">
-			<h2 class="text-heading-m mb-m">Articles</h2>
-			<p class="mb-m">
-				Learn about game design in our bite sized summaries covering game design talks and
-				interviews.
-			</p>
-			<Link href="/articles" inNewTab={false}>View articles</Link>
-		</div>
+		</TextBox>
+		<BackgroundImage imgUrl={gdofAttend} />
 	</div>
-	<div>
-		<Blurb isDark={false}><h2>Companies</h2></Blurb>
+	<div class="flex flex-wrap-reverse">
+		<BackgroundImage imgUrl={gdofSpeak} />
+		<TextBox>
+			<h2 class="text-heading-l mb-m">Speak</h2>
+			<p class="mb-m">
+				Share your knowledge and open new professional opportunities by speaking in our event.
+			</p>
+			<p>
+				All topics related to game design are welcome and you can practice your presentation skills
+				in warm and friendly community.
+			</p>
+		</TextBox>
 	</div>
-	<div class="container mt-l mb-xxl">
-		<h3 class="mb-m text-heading-m">Host</h3>
-		<p class="mb-s">
-			Connect and reach enthusiastic game designers by hosting an event together with us.
-		</p>
-		<p>
-			Our experienced crew organises event together with you. Participate to organising as much or
-			little as you want, but we'll ensure that the event goes smooth from opening the doors to
-			closing the lights.
-		</p>
+	<div class="flex flex-justify-end flex-wrap">
+		<TextBox>
+			<h2 class="text-heading-l mb-m">Host</h2>
+			<p>
+				Reach over 300 game designers with variety of backgrounid and share your company's passion
+				to making games with them.
+			</p>
+		</TextBox>
+		<BackgroundImage imgUrl={gdofHost} />
 	</div>
 </section>
 <section id="next-event" class="r-20 bg-secondary-100 pv-l">
@@ -109,6 +99,16 @@
 		<Button href={meetupGroupLink}>Join Meetup group</Button>
 	</div>
 </section>
+<section>
+	<Blurb isDark={false}>Articles</Blurb>
+	<div class="container pv-l">
+		<h2 class="text-heading-m mb-m">Read</h2>
+		<p class="mb-l">
+			Learn about game design in our bite sized summaries covering game design talks and interviews.
+		</p>
+		<Link href="/articles" inNewTab={false}>View articles</Link>
+	</div>
+</section>
 <section class="bg-secondary-100 pt-l pb-xxl">
 	<div class="container">
 		<h2 class="text-heading-m mb-m">Community for game designers</h2>
@@ -137,6 +137,6 @@
 
 <style>
 	#landing-page {
-		/* min-height: calc(95vh - var(--header-height)); */
+		min-height: calc(65vh - var(--header-height));
 	}
 </style>

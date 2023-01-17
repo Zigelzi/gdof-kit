@@ -558,3 +558,11 @@ Start of project specific styling.
 .flex-wrap {
 	flex-wrap: wrap;
 }
+
+.flex-wrap-reverse {
+	flex-wrap: wrap-reverse;
+}
+
+.flex-justify-end {
+	justify-content: flex-end;
+}
