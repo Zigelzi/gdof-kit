@@ -29,6 +29,7 @@
 	<slot />
 </main>
 <Footer />
+
 <style>
 	main {
 		min-height: calc(100vh - var(--header-height) - var(--footer-height));

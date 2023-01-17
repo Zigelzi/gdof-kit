@@ -1,16 +1,16 @@
 <script>
-    import {page} from "$app/stores";
+	import { page } from '$app/stores';
 	export let href;
 
-    $: isCurrentPage = checkCurrentPage($page.url.pathname);
+	$: isCurrentPage = checkCurrentPage($page.url.pathname);
 
-    function checkCurrentPage(page) {
-        if (page.includes(href)) {
-            return true;
-        }
+	function checkCurrentPage(page) {
+		if (page.includes(href)) {
+			return true;
+		}
 
-        return false;
-    }
+		return false;
+	}
 </script>
 
 <li class="nav-item">
@@ -36,7 +36,7 @@
 		text-decoration: underline;
 	}
 
-    .current-page {
-        color: var(--blue-500);
-    }
+	.current-page {
+		color: var(--blue-500);
+	}
 </style>

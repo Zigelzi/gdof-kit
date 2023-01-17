@@ -1,5 +1,5 @@
 <script>
-	import ArticleItem from "$lib/components/ArticleItem.svelte";
+	import ArticleItem from '$lib/components/ArticleItem.svelte';
 	export let data;
 
 	let articles = data.posts;
@@ -10,6 +10,6 @@
 		<h1 class="fs-heading-m">Articles</h1>
 	</div>
 	{#each articles as article, id}
-		<ArticleItem article={article} />
+		<ArticleItem {article} />
 	{/each}
 </div>

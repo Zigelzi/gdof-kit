@@ -1,6 +1,7 @@
 <script>
-	import Navigation from "./Navigation/Navigation.svelte";
+	import Navigation from './Navigation/Navigation.svelte';
 </script>
+
 <header class="ph-m pb-s">
 	<div class="container primary-header pt-s">
 		<div class="header-item">
@@ -41,10 +42,9 @@
 		.header-item:first-child {
 			justify-content: flex-start;
 		}
-		
+
 		.header-item:last-child {
 			justify-content: flex-end;
 		}
 	}
-
 </style>

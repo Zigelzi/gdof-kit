@@ -21,9 +21,11 @@ User flows in priority order.
 7. Join Meetup group
 
 ## Opportunities
+
 What are the needs, desires and pain points of the target audience? Not in priority order.
 
 **Designers**
+
 1. I want to meet new people who are interested in game design
 2. I want to discuss about game design with professionals
 3. I want to learn about new topics in game design

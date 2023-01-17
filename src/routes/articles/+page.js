@@ -10,14 +10,14 @@ export async function load() {
 			posts {
 				title
 				content {
-					markdown,
+					markdown
 					html
 				}
 				author {
 					name
-				},
-				slug,
-				excerpt,
+				}
+				slug
+				excerpt
 				publishedAt
 			}
 		}

@@ -1,18 +1,17 @@
 <script>
-    export let href;
+	export let href;
 
 	export let inNewTab = true;
 
 	$: target = setTargetAttribute();
-	
+
 	function setTargetAttribute() {
 		let targetText;
 
 		if (inNewTab) {
-			targetText = "_blank";
-		}
-		else {
-			targetText = "_self";
+			targetText = '_blank';
+		} else {
+			targetText = '_self';
 		}
 		return targetText;
 	}
@@ -37,6 +36,6 @@
 	}
 
 	a:visited {
-		color: var(--fc-grey-100)
+		color: var(--fc-grey-100);
 	}
 </style>

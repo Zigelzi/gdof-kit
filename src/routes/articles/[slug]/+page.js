@@ -6,23 +6,23 @@ export async function load({ params }) {
 	);
 	const query = gql`
 		query GetPostBySlug($slug: String!) {
-			post(where: {slug: $slug}) {
-				title,
+			post(where: { slug: $slug }) {
+				title
 				author {
 					name
 				}
 				content {
-					html,
-                    raw
-				},
-                publishedAt
+					html
+					raw
+				}
+				publishedAt
 			}
 		}
 	`;
 
-    const variables = {
-        slug: params.slug
-    }
+	const variables = {
+		slug: params.slug
+	};
 	const post = await hygraph.request(query, variables);
 	return post;
 }

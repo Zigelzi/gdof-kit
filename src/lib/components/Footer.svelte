@@ -4,8 +4,9 @@
 		<p>Community for game design enthusiasts</p>
 	</div>
 </footer>
+
 <style>
 	footer {
 		height: var(--footer-height);
 	}
-</style>	
+</style>

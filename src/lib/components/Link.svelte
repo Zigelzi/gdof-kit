@@ -4,15 +4,14 @@
 	export let inNewTab = true;
 
 	$: target = setTargetAttribute();
-	
+
 	function setTargetAttribute() {
 		let targetText;
 
 		if (inNewTab) {
-			targetText = "_blank";
-		}
-		else {
-			targetText = "_self";
+			targetText = '_blank';
+		} else {
+			targetText = '_self';
 		}
 		return targetText;
 	}
@@ -24,7 +23,7 @@
 
 <style>
 	a {
-		font-size: var(--fs-link);	
+		font-size: var(--fs-link);
 		transition: color var(--td-s);
 	}
 
