@@ -1,4 +1,4 @@
-<div class="text-box flex flex-align-center">
+<div class="text-box flex mt-xxl">
 	<div>
 		<slot />
 	</div>
@@ -6,15 +6,16 @@
 
 <style>
 	.text-box {
-		min-height: 30rem;
+		min-height: 25rem;
 		width: 90%;
-		margin: auto;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	@media (min-width: 50em) {
 		.text-box {
 			width: 45%;
-			padding: var(--p-xxl) var(--p-l);
+			padding: 0 var(--p-l);
 			max-width: 30rem;
 		}
 	}

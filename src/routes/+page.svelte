@@ -21,7 +21,7 @@
 </script>
 
 <section id="landing-page">
-	<div class="container mt-l mb-xxl ph-m">
+	<div class="container mt-l mb-xxl">
 		<p class="fw-bold fs-heading-l">Game design community for you</p>
 		<p class="pv-m">
 			Join the community of professional and aspiring professional game designers in Finland. Find
@@ -61,14 +61,14 @@
 		<TextBox>
 			<h2 class="text-heading-l mb-m">Host</h2>
 			<p>
-				Reach over 300 game designers with variety of backgrounid and share your company's passion
-				to making games with them.
+				Share you company's passion to making games with over 300 game designers with variety of
+				background by hosting event with us!
 			</p>
 		</TextBox>
 		<BackgroundImage imgUrl={gdofHost} />
 	</div>
 </section>
-<section id="next-event" class="r-20 bg-secondary-100 pv-l">
+<section id="next-event" class="r-20 bg-secondary-100 pt-l pb-xxl">
 	<div class="container">
 		<h2 class="text-heading-m">Next event</h2>
 		{#if isNextEventAvailable}
@@ -87,7 +87,7 @@
 		{/if}
 	</div>
 </section>
-<section class="pv-l">
+<section class="mt-l mb-xxl">
 	<div class="container">
 		<h2 class="text-heading-m">Past events</h2>
 		{#each events as event, i}
@@ -101,7 +101,7 @@
 </section>
 <section>
 	<Blurb isDark={false}>Articles</Blurb>
-	<div class="container pv-l">
+	<div class="container mt-l mb-xxl">
 		<h2 class="text-heading-m mb-m">Read</h2>
 		<p class="mb-l">
 			Learn about game design in our bite sized summaries covering game design talks and interviews.

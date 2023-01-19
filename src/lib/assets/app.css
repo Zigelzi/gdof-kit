@@ -368,6 +368,11 @@ Start of project specific styling.
 	padding-bottom: var(--p-l);
 }
 
+.pv-xxl {
+	padding-top: var(--p-xxl);
+	padding-bottom: var(--p-xxl);
+}
+
 .pt-xs {
 	padding-top: var(--p-xs);
 }
