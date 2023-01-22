@@ -1,9 +1,8 @@
 <script>
 	import { astToHtmlString } from '@graphcms/rich-text-html-renderer';
-
 	export let data;
 
-	const article = data.post;
+	const article = data.article;
 	const publishedDate = new Date(article.publishedAt).toLocaleDateString('fi');
 
 	const renderers = {
@@ -18,11 +17,20 @@
 	}
 
 	let postsWithContent = addContent(article);
+
+	async function like() {
+		let res = await fetch(`http://localhost:5000/likes/${article.id}`, {
+			method: 'POST'
+		});
+
+		console.log(res);
+	}
 </script>
 
 <div class="container">
 	<h1 class="text-heading-l pt-l">{postsWithContent.title}</h1>
 	<p class="pb-m text-grey-400">{article.author.name} - {publishedDate}</p>
+	<button on:click={like}>Like</button>
 	<div class="pb-m">
 		{@html postsWithContent.rendered}
 	</div>
