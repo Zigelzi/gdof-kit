@@ -68,17 +68,17 @@
 	--bg-btn: var(--blue-500);
 	--bg-btn-hover: var(--blue-600);
 
-	--p-xs: 5px;
-	--p-s: 10px;
-	--p-m: 20px;
-	--p-l: 35px;
-	--p-xxl: 100px;
+	--p-xs: 8px;
+	--p-s: 16px;
+	--p-m: 24px;
+	--p-l: 32px;
+	--p-xxl: 112px;
 
-	--mg-xs: 5px;
-	--mg-s: 10px;
-	--mg-m: 20px;
-	--mg-l: 35px;
-	--mg-xxl: 100px;
+	--mg-xs: 8px;
+	--mg-s: 16px;
+	--mg-m: 24px;
+	--mg-l: 32px;
+	--mg-xxl: 112px;
 
 	--img-s: 80px;
 

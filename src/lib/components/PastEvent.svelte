@@ -16,7 +16,7 @@
 		{startDate.toLocaleString('en-GB', { weekday: 'long' })} | {startDate.toLocaleDateString('fi')} |
 		{venue.name}
 	</p>
-	<div class="pv-m">
+	<div class="pb-s">
 		<Link href={meetupLink}>View event in Meetup</Link>
 	</div>
 </div>

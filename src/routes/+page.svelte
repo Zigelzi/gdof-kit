@@ -89,14 +89,16 @@
 </section>
 <section class="mt-l mb-xxl">
 	<div class="container">
-		<h2 class="text-heading-m">Past events</h2>
+		<h2 class="text-heading-m mb-m">Past events</h2>
 		{#each events as event, i}
 			<PastEvent {...event} index={i} />
 		{/each}
-		<p class="pv-m">
-			Join the Game Designers of Finland Meetup group to stay up to date about new events
-		</p>
-		<Button href={meetupGroupLink}>Join Meetup group</Button>
+		<div class="border-top-primary-300">
+			<p class="pv-m">
+				Join the Game Designers of Finland Meetup group to stay up to date about new events
+			</p>
+			<Button href={meetupGroupLink}>Join Meetup group</Button>
+		</div>
 	</div>
 </section>
 <section>
