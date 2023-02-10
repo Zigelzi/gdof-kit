@@ -15,9 +15,24 @@
 	export let data;
 
 	let meetupGroupLink = 'https://www.meetup.com/game-designers-finland/';
-	let isNextEventAvailable = false;
+	let isNextEventAvailable = true;
 
 	let events = data.events;
+
+	let futureEvents = getEvents(false);
+	let pastEvents = getEvents(true);
+	function getEvents(isPast) {
+		let filteredEvents = events.filter((event) => {
+			let eventDate = new Date(event.startDate);
+			let today = new Date();
+			if (isPast) {
+				return eventDate <= today;
+			} else {
+				return eventDate >= today;
+			}
+		});
+		return filteredEvents;
+	}
 </script>
 
 <section id="landing-page">
@@ -72,7 +87,7 @@
 	<div class="container">
 		<h2 class="text-heading-m">Next event</h2>
 		{#if isNextEventAvailable}
-			<NextEvent event={events[0]} />
+			<NextEvent {...futureEvents[0]} />
 		{:else}
 			<div class="pv-m">
 				<h3 class="fw-bold fs-heading-l">To be announced</h3>
@@ -89,8 +104,8 @@
 </section>
 <section class="mt-l mb-xxl">
 	<div class="container">
-		<h2 class="text-heading-m mb-m">Past events</h2>
-		{#each events as event, i}
+		<h2 class="text-heading-m">Past events</h2>
+		{#each pastEvents as event, i}
 			<PastEvent {...event} index={i} />
 		{/each}
 		<div class="border-top-primary-300">
