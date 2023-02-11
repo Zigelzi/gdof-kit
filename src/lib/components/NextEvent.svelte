@@ -24,7 +24,7 @@
 
 <div class="pv-m">
 	<h3 class="fw-bold fs-heading-l">{title}</h3>
-	<p class="text-accent-500">
+	<p class="text-primary-500">
 		{startDate.toLocaleString('en-GB', { weekday: 'long' })} | {startDate.toLocaleDateString('fi')} |
 		{startDate.toLocaleTimeString('fi', timeOptions)} - {endDate.toLocaleTimeString(
 			'fi',
@@ -32,11 +32,11 @@
 		)}
 	</p>
 	{#if daysToEvent > 0}
-		<p class="text-accent-500">In {daysToEvent} days</p>
+		<p class="text-primary-500">In {daysToEvent} days</p>
 	{:else if daysToEvent === 0}
-		<p class="text-accent-500">Today!</p>
+		<p class="text-primary-500">Today!</p>
 	{/if}
-	<div class="pv-m text-grey-400">
+	<div class="mt-xs mb-m">
 		<p>{venue.name}</p>
 		<p>{venue.address}, {venue.city}</p>
 	</div>

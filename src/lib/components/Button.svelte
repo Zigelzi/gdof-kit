@@ -22,13 +22,15 @@
 <style>
 	.btn-primary {
 		display: inline-block;
-		background-color: var(--bg-btn);
+		background-color: var(--blue-500);
+		border: 2px solid var(--blue-500);
 		transition: background-color var(--td-s);
 	}
 
 	.btn-primary:hover,
 	.btn-primary:focus {
-		background-color: var(--bg-btn-hover);
+		background-color: #ffffff;
+		color: var(--blue-500);
 	}
 
 	a {

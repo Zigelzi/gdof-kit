@@ -17,7 +17,7 @@
 	}
 </script>
 
-<a {href} class="pv-s text-accent-500" class:fw-bold={isBold} {target}>
+<a {href} class="pv-s text-primary-500" class:fw-bold={isBold} {target}>
 	<slot />
 </a>
 

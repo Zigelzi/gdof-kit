@@ -8,7 +8,7 @@
 
 	const renderers = {
 		h2: ({ children }) => `<h2 class="fw-bold fs-heading-m pt-m pb-m">${children}</h2>`,
-		a: ({ children, href }) => `<a href=${href} class="text-accent-500 text-link">${children}</a>`,
+		a: ({ children, href }) => `<a href=${href} class="text-primary-500 text-link">${children}</a>`,
 		p: ({ children }) => `<p class="pb-m">${children}</p>`
 	};
 	function addContent(article) {

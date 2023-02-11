@@ -23,11 +23,11 @@
 
 	.dark {
 		background: var(--blue-700);
-		color: var(--grey-100);
+		color: #ffffff;
 	}
 
 	.light {
-		background-color: var(--blue-500);
-		color: var(--grey-100);
+		background-color: var(--blue-300);
+		color: var(--blue-900);
 	}
 </style>

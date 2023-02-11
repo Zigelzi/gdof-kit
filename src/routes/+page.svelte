@@ -26,7 +26,7 @@
 			let eventDate = new Date(event.startDate);
 			let today = new Date();
 			if (isPast) {
-				return eventDate <= today;
+				return eventDate < today;
 			} else {
 				return eventDate >= today;
 			}
@@ -48,7 +48,7 @@
 	</div>
 </section>
 <section>
-	<Blurb><h2>Events</h2></Blurb>
+	<Blurb isDark={false}><h2>Events</h2></Blurb>
 	<div class="flex flex-justify-end flex-wrap">
 		<TextBox>
 			<h2 class="text-heading-l mb-m">Attend</h2>
@@ -83,7 +83,7 @@
 		<BackgroundImage imgUrl={gdofHost} />
 	</div>
 </section>
-<section id="next-event" class="r-20 bg-secondary-100 pt-l pb-xxl">
+<section id="next-event" class="bg-secondary-100 pt-l pb-xxl">
 	<div class="container">
 		<h2 class="text-heading-m">Next event</h2>
 		{#if isNextEventAvailable}
@@ -117,7 +117,7 @@
 	</div>
 </section>
 <section>
-	<Blurb isDark={false}>Articles</Blurb>
+	<Blurb>Articles</Blurb>
 	<div class="container mt-l mb-xxl">
 		<h2 class="text-heading-m mb-m">Read</h2>
 		<p class="mb-l">
