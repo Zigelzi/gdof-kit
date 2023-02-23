@@ -15,9 +15,13 @@
 	export let data;
 
 	let meetupGroupLink = 'https://www.meetup.com/game-designers-finland/';
-	let isNextEventAvailable = true;
 
 	let events = data.events;
+	events = events.sort((event1, event2) => {
+		let event1Date = new Date(event1.startDate);
+		let event2Date = new Date(event2.startDate);
+		return event2Date - event1Date;
+	});
 
 	let futureEvents = getEvents(false);
 	let pastEvents = getEvents(true);
@@ -86,7 +90,7 @@
 <section id="next-event" class="bg-secondary-100 pt-l pb-xxl">
 	<div class="container">
 		<h2 class="text-heading-m">Next event</h2>
-		{#if isNextEventAvailable}
+		{#if futureEvents.length > 0}
 			<NextEvent {...futureEvents[0]} />
 		{:else}
 			<div class="pv-m">
