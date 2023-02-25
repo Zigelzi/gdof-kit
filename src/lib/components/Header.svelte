@@ -2,7 +2,7 @@
 	import Navigation from './Navigation/Navigation.svelte';
 </script>
 
-<header class="mh-m pv-s">
+<header class="mh-m">
 	<div class="container primary-header">
 		<div class="header-item">
 			<a href="/" class="fw-bold fs-heading-m">Game Designers of Finland</a>
@@ -23,6 +23,7 @@
 		height: var(--header-height);
 		align-items: center;
 		flex-wrap: wrap;
+		position: sticky;
 	}
 
 	a,

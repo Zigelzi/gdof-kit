@@ -11,13 +11,14 @@
 	import gdofAttend from '$lib/assets/gdof_attend.webp';
 	import gdofHost from '$lib/assets/gdof_host.webp';
 	import gdofSpeak from '$lib/assets/gdof_speak.webp';
+	import gdofMerge from '$lib/assets/gdf_merge.webm';
 
 	export let data;
 
 	let meetupGroupLink = 'https://www.meetup.com/game-designers-finland/';
 
 	let events = data.events;
-	events = events.sort((event1, event2) => {
+	events.sort((event1, event2) => {
 		let event1Date = new Date(event1.startDate);
 		let event2Date = new Date(event2.startDate);
 		return event2Date - event1Date;
@@ -40,7 +41,7 @@
 </script>
 
 <section id="landing-page">
-	<div class="container mt-l mb-xxl">
+	<div class="container">
 		<p class="fw-bold fs-heading-l">Game design community for you</p>
 		<p class="pv-m">
 			Join the community of professional and aspiring professional game designers in Finland. Find
@@ -50,6 +51,9 @@
 			<Button href={meetupGroupLink}>Join Meetup group</Button>
 		</div>
 	</div>
+	<video class="video-bg" autoplay muted loop>
+		<source src={gdofMerge} type="video/mp4" />
+	</video>
 </section>
 <section>
 	<Blurb isDark={false}><h2>Events</h2></Blurb>
@@ -158,6 +162,25 @@
 
 <style>
 	#landing-page {
-		min-height: calc(65vh - var(--header-height));
+		min-height: calc(95vh - var(--header-height));
+		position: relative;
+		background: hsla(0, 0%, 95%, 0.65);
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+	}
+
+	#landing-page .container {
+		flex-shrink: 0;
+	}
+
+	.video-bg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -52%);
+		min-width: 100%;
+		min-height: 100%;
+		z-index: -1;
 	}
 </style>
